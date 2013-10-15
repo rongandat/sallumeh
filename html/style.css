@@ -1,0 +1,774 @@
+/* 
+    Document   : style
+    Created on : Oct 7, 2013, 10:37:09 AM
+    Author     : Khiem Pham
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, font, img, ins, kbd, q, s, samp,
+small, strike, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+    margin: 0;padding: 0;border: 0;outline: 0;
+    font-weight: Gothic;font-style: Gothic;font-size: 100%;font-family: Gothic;
+    vertical-align: baseline;
+}
+body{
+    background-color: #000;
+}
+@font-face
+{
+    font-family: Gothic;
+    src: url('font/GOTHIC.TTF');
+} 
+@font-face
+{
+    font-family: Zapfino;
+    src: url('font/ZapfinoExtraLT-Four.otf');
+} 
+#container{
+    width: 825px;
+    margin: 0 auto;
+    color: #fff;
+    font-family: "Gothic"
+}
+
+ul,ol{
+    list-style-type: none;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+}
+.clb{
+    clear: both;
+}
+.fll{
+    float: left;
+}
+.flr{
+    float: right;
+}
+#header{
+    padding: 65px 10px 0;
+}
+div.logo{
+    float: left;
+    display: block;
+}
+div.menu{
+    float: right;
+}
+
+div.head-menu{
+    float: right;
+    display: block;
+    padding: 63px 0 15px;
+}
+
+div.head-menu ul{
+    float: left;
+}
+div.head-menu ul li{
+    float: left;
+    color: #b2b1b1;
+    font-size: 11px;
+    line-height: 23.5px;
+}
+
+div.head-menu ul li a{
+    text-transform: uppercase;
+    padding:  0 9px;
+    /*border-right: 1px solid #b2b1b1;*/
+    color: #b2b1b1;
+    font-size: 11px;
+    display: block;
+
+}
+
+div.head-menu input{
+    float: left;
+    border: 1px solid #8d8e90;
+    width: 138px;
+    height: 20px;
+    background-color: #000;
+    color: #b2b1b1;
+    padding-left: 2px;
+
+}
+
+div.main-menu{
+    display: block;
+
+
+}
+
+div.main-menu ul{
+    float: right;
+}
+div.main-menu ul li{
+    display: block;
+    float: left;
+}
+div.main-menu ul li a{
+    text-transform: uppercase;
+    padding: 13px 0 15px 52px;
+    color: #fff;
+    font-size: 14px;
+    display: block;
+}
+
+div.main-menu ul li:first-child a{
+    padding-left: 0 ;
+}
+
+div.main-menu ul li.active a,div.main-menu ul li:hover a{
+    color: #fd48dd;
+}
+
+div.banner{
+    margin-top: 22px;
+}
+
+div.banner .banner1{
+    float: left;
+}
+div.banner .banner2{
+    float: right;
+}
+
+
+div.blog{
+    position: relative;
+    display: block;
+    float: left;
+    width: 400px;
+    background: url(img/bg_blog.png);
+}
+div.blog .image{
+    float: left;
+
+}
+div.blog .blog-image{
+    left: 40px;
+    position: absolute;
+    top: -15px;
+}
+
+div.blog .content {
+    color: #000000;
+    display: block;
+    float: left;
+    font-family: Zapfino;
+    font-size: 28px;
+    line-height: 1;
+    padding: 30px 0 0 20px;
+    width: 173px;
+}
+div.blog .content  a{
+    color: #00aeef;
+    font-size: 12px;
+    font-family: Gothic;
+    float: right;
+    padding: 0 10px 0 0;
+}
+#footer{
+    padding: 13px 30px 40px 15px;
+    display: block;
+}
+#footer .footer-menu{
+    float: left;
+}
+
+#footer .footer-menu ul li{
+    display: block;
+    float: left;
+    color: #b2b1b1;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 0 5px;
+}
+
+#footer .footer-menu ul li a{
+    color: #b2b1b1;
+    font-size: 10px;
+    text-transform: uppercase;
+    padding: 0 5px;
+}
+
+#footer .social{
+    float: right;
+}
+
+/*product page*/
+
+div.body-content {
+    background: url("img/product_backgroud.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    display: block;
+    height: 440px;
+    margin: 45px 0 0 20px;
+    position: relative;
+    width: 100%;
+}
+
+
+h1.detal {
+    color: #F3219E;
+    font-family: Zapfino;
+    font-size: 68px;
+    font-weight: normal;
+    margin-left: 12px;
+    position: absolute;
+    text-shadow: -2px 3px 0 #000000;
+    top: -50px;
+}
+
+div.breadcrumb {
+    display: block;
+    padding: 15px 18px;
+    clear: both;
+}
+
+div.breadcrumb ul li{
+    display: block;
+    float: left;
+}
+
+
+div.breadcrumb ul li, div.breadcrumb ul li a {
+    font-size: 11px;
+    padding: 5px 2px;
+    text-transform: uppercase;
+}
+
+ul.products{
+    display: block;
+    margin: 20px 32px 0;
+}
+
+ul.products li{
+    display: block;
+    float: left;
+    padding: 12px 21px;
+    font-size: 10px;
+    color: #000;
+    text-align: center;
+    line-height: 1;
+}
+
+ul.products li .image{
+    padding-bottom: 5px;
+}
+
+
+ul.products li .title a{
+    color: #000;
+}
+ul.products li .cart a{
+    color: #f3219e;
+}
+/*end product page*/
+
+
+/*product detail*/
+
+div.images{
+    padding: 20px 30px 0 35px;
+    display: block;
+    float: left;
+}
+
+div.images .thumbnails{
+    padding: 25px 0 0 0;
+}
+
+div.images .thumbnails a{
+
+
+    padding-right: 10px;
+}
+
+div.images .thumbnails a:last-child{
+    padding-right: 0;
+}
+
+div.images .thumbnails a img{
+    width: 50px;
+    height: 50px;
+    background: #fff;
+
+}
+
+
+div.product-content{
+    width: 230px;
+    float: left;
+    color: #000;
+    padding: 50px 20px 0 0;
+}
+
+div.product-content .product_title{
+    font-size: 15px;
+    font-weight: bold;
+}
+
+div.product-content .price{
+    font-size: 15px;
+}
+
+div.product-content .description{
+    font-size: 12px;
+    padding: 25px 0;
+}
+
+div.product-content .more{
+    font-size: 14px;
+    font-weight: bold;
+    color: #000;
+}
+
+div.product-content .stock{
+    padding-bottom: 20px;
+    font-size: 14px;
+}
+
+div.product-content .cart{
+    font-size: 14px;
+    color: #f3219e;
+    text-transform: uppercase;
+    display: block;
+    padding-bottom: 20px;
+}
+
+div.product-content .product_meta{
+    font-size: 12px;
+}
+
+div.product-content .product_meta a{
+    font-size: 12px;
+    color: #000
+}
+
+div.related {
+    /*border-image: url("img/border.png");*/
+    border-left: 1px solid #bcbdc0;
+    display: block;
+    height: 330px;
+    overflow: hidden;
+    padding: 0  0 30px 25px;
+    color: #000
+}
+div.related h2{
+    color: #000;
+    font-size: 15px;
+    font-weight: bold;
+}
+div.related .products-realted li{
+    padding-top: 20px;
+    line-height: 1;
+    width: 110px;
+    text-align: center;
+}
+
+div.related .products-realted li h3{
+    font-size: 10px;
+    color: #000;
+    text-transform: uppercase;
+}
+
+div.related .products-realted li .price{
+    font-size: 10px;
+    color: #000;
+    text-align: center;
+}
+
+div.related .products-realted li .add_to_cart_button{
+    font-size: 8px;
+    color: #f3219e;
+    text-align: center;
+    text-transform: uppercase;
+}
+/*end product detail*/
+
+
+/*shopping*/
+div.shopping{
+    padding: 25px 50px 25px;
+    color: #000;
+}
+
+div.shopping thead th{
+    border-bottom: 4px solid #69696a;
+    border-right: 1px solid #69696a;
+    text-transform: uppercase;
+}
+div.shopping tbody td, div.shopping tfoot td{
+    border-bottom: 2px solid #69696a;
+    border-right: 1px solid #69696a;
+    font-size: 12px;
+
+}
+
+div.shopping td{
+    vertical-align: top;
+}
+div.shopping tbody td.image{
+}
+
+div.shopping tbody td.title{
+    padding:  10px 50px 10px 30px;
+}
+div.shopping tbody td.image{
+    padding:  5px 10px 5px 3px;
+}
+div.shopping tbody td.model{
+    padding:  10px 20px;
+    text-align: center;
+}
+div.shopping tbody td.price{
+    padding:  10px 0;
+    text-align: center;
+}
+div.shopping tbody td.qty{
+    padding:  10px 0;
+    text-align: center;
+}
+div.shopping thead th:last-child, div.shopping tbody td:last-child, div.shopping tfoot td:last-child{
+    border-right: none;
+}
+
+div.shopping tfoot td{
+    height: 55px;
+}
+
+div.shopping_more_description{
+    color: #000;
+    padding: 0 50px;
+}
+
+div.shopping_more_description .counpon{
+    display: block;
+    float: left;
+}
+div.shopping_more_description .counpon span{
+    display: block;
+    float: left;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bold;
+    line-height: 2
+}
+
+div.shopping_more_description .code{
+    float: left;
+    padding-left: 15px;
+
+
+}
+div.shopping_more_description .counpon input{
+    display: block;
+    border: 1px solid #585556;
+    background: none;
+    width: 88px;
+    height: 17px
+}
+div.shopping_more_description .counpon a{
+    display: block;
+    color: #ec008c;
+    font-size: 12px;
+    padding: 6px 10px;
+
+}
+
+div.shopping_more_description .total{
+    float: right;
+}
+div.shopping_more_description .total .update{
+    display: block;
+    padding: 0 15px 5px 0;
+}
+div.shopping_more_description .total .update a, div.shopping_more_description .total .update span{
+    color: #ec008c;
+    font-size: 12px;
+}
+div.shopping_more_description .total table{
+    float: right;
+    display: block;
+    padding-right: 25px;
+}
+div.shopping_more_description .total table tr td{
+    border-bottom:1px solid #525154;
+    width: 80px;
+    padding: 8px 0;
+    font-size: 12px;
+    text-align: center;
+}
+
+div.shopping_more_description .total table tr td:first-child{
+    border-right:1px solid #525154;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+/*end shopping*/
+
+
+/*checkout*/
+div.checkout{
+    color: #000;
+    padding: 5px 45px;
+}
+
+div.checkout h1{
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+div.checkout h3{
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+}
+
+
+div.checkout textarea {
+    /*background: url("img/bg_textarea.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);*/
+    -moz-box-shadow: -1px 3px 11px #000000;
+    -webkit-box-shadow: -1px 3px 11px #000000;
+    box-shadow: -1px 3px 11px #000000;
+    border: medium none;
+    display: block;
+    padding: 10px 0 0 15px;
+    width: 703px;
+    height: 30px;
+    resize: none;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+div.checkout table{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    -moz-box-shadow: -1px 3px 11px #000000;
+    -webkit-box-shadow: -1px 3px 11px #000000;
+    box-shadow: -1px 3px 11px #000000;
+
+    background: #fff;
+    border: 1px solid #615f5f;
+}
+
+div.checkout table tr td{
+    border-bottom: 1px solid #615f5f;
+    text-align: center;
+    padding: 5px 0;
+    font-size: 12px;
+}
+div.checkout table tr td:first-child{
+    border-right: 2px solid #615f5f;
+}
+div.checkout table tr:last-child td{
+    border-bottom: none;
+}
+
+input[type=checkbox] {
+    position: absolute; 
+    overflow: hidden; 
+    clip: rect(0 0 0 0); 
+    height:1px; 
+    width:1px; 
+    margin:-1px; 
+    padding:0;
+    border:0;
+}
+
+input[type=submit] {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: medium none;
+    margin-top: 10px;
+    padding: 3px 45px;
+    -moz-box-shadow: -1px 3px 11px #000000;
+    -webkit-box-shadow: -1px 3px 11px #000000;
+    box-shadow: -1px 3px 11px #000000;
+    color: #ec008c;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+input[type=checkbox] + label {
+    padding-left:23px;
+    height:20px; 
+    display:inline-block;
+    line-height:16px;
+    background-repeat:no-repeat;
+    background-position: 0 0;
+    background-position: 0 -6px;
+    font-size:12px;
+    vertical-align:middle;
+    cursor:pointer;
+    background-image:url(img/checkbox.png);
+    background-position: 0 -6px;
+    margin-right: 10px;
+}
+input[type=checkbox]:checked + label {
+    background-position: 0 -31px;
+}
+
+/*end checkout*/
+
+
+/*billing*/
+div.billing {
+    color: #000;
+    width: 798px;
+}
+div.billing .counpon-code{
+    color: #000;
+    font-weight: bold;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    display: block;
+}
+div.billing .counpon-code a{
+    color: #00aeef;
+    font-weight: normal;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+
+
+div.billing .form{
+    padding: 20px 35px;
+    font-size: 12px;
+}
+
+div.billing .form h1{
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
+div.billing .form input[type=text]{
+    -moz-box-shadow: 0 0 5px #000000;
+    -webkit-box-shadow: 0 0 5px #000000;
+    box-shadow: 0 0 5px #000000;
+    padding: 2px 5px 5px;
+    display: block;
+    background: #fff;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.large{
+    width: 718px;
+}
+.small{
+    width: 325px;
+}
+/*end billing*/
+
+
+/*blog page*/
+
+div.blogpage .left-content{
+    display: block;
+    float: left;
+    padding: 50px 25px 0 20px;
+}
+
+div.blogpage .left-content .date{
+    
+    font-size: 14px;
+}
+div.blogpage .left-content span{
+    color: #f3219e;
+    display: block;
+    text-align: center;
+}
+div.blogpage .left-content span.day{
+    font-size: 19px;
+}
+div.blogpage .left-content .tags{
+    padding-top: 30px;
+}
+div.blogpage .left-content .tags span{
+    text-align: right;
+}
+
+div.blogpage .left-content a{
+    display: block;
+    color: #00aeef;
+    text-align: right;
+    font-size: 12px;
+}
+
+div.blogpage .right-content{
+    display: block;
+    float: left;
+    width: 380px;
+    padding: 45px 25px 0 0;
+    text-align: left;
+}
+
+div.blogpage .right-content h1{
+    font-family: Zapfino;
+    font-size: 30px;
+    color: #ec008c;
+    padding-bottom: 5px;
+    text-transform: capitalize;
+}
+
+div.blogpage .right-content .content{
+    color: #000;
+    font-size: 12px;
+    line-height: 1.5
+}
+
+div.blogpage .tabs{
+    float: left;
+    margin: 30px 0;
+    border-left: 1px solid #bcbdc0;
+    width: 190px;
+    padding: 0 15px;
+    height: 375px;
+    color: #000;
+}
+
+div.blogpage .tabs h3{
+    font-weight: bold;
+    font-size: 15px;
+}
+div.blogpage .tabs a{
+    color: #000;
+    font-size: 14px;
+    
+}
+div.blogpage .tabs a.active{
+    color: #ff00ff
+}
+
+div.blogpage .tabs .content p{
+    font-size: 12px;
+    color: #ff00ff;
+    
+}
+
+div.blogpage .tabs .tags{
+    padding-top: 40px;
+    height: 135px;
+}
+/*end blog page*/
+
