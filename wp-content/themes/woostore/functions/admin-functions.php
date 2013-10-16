@@ -2790,7 +2790,7 @@ function woo_breadcrumbs( $args = array() ) {
 	/* Set up the default arguments for the breadcrumb. */
 	$defaults = array(
 		'separator' => '&gt;',
-		'before' => '<span class="breadcrumb-title">' . __( 'You are here:', $textdomain ) . '</span>',
+		'before' => '<span class="breadcrumb-title">' . __( '', $textdomain ) . '</span>',
 		'after' => false,
 		'front_page' => true,
 		'show_home' => __( 'Home', $textdomain ),

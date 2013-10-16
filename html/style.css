@@ -211,12 +211,16 @@ div.blog .content  a{
 }
 
 /*product page*/
-
-div.body-content {
-    background: url("img/product_backgroud.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+div.body-content-top{
+    background: url("img/bg_header.png") no-repeat scroll left top rgba(0, 0, 0, 0);
     display: block;
-    height: 440px;
-    margin: 45px 0 0 20px;
+    background-color: #fcfcfc;
+    margin: 45px 7px 0 20px;
+    min-height: 440px;
+}
+div.body-content {
+    background: url("img/bg_footer.png") no-repeat scroll left bottom rgba(0, 0, 0, 0);
+    display: block;
     position: relative;
     width: 100%;
 }
