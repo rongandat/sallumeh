@@ -586,16 +586,7 @@ div.checkout table tr:last-child td{
     border-bottom: none;
 }
 
-input[type=checkbox] {
-    position: absolute; 
-    overflow: hidden; 
-    clip: rect(0 0 0 0); 
-    height:1px; 
-    width:1px; 
-    margin:-1px; 
-    padding:0;
-    border:0;
-}
+
 
 input[type=submit] {
     background: none repeat scroll 0 0 #FFFFFF;
@@ -609,24 +600,6 @@ input[type=submit] {
     font-size: 12px;
     font-weight: bold;
     text-transform: uppercase;
-}
-input[type=checkbox] + label {
-    padding-left:23px;
-    height:20px; 
-    display:inline-block;
-    line-height:16px;
-    background-repeat:no-repeat;
-    background-position: 0 0;
-    background-position: 0 -6px;
-    font-size:12px;
-    vertical-align:middle;
-    cursor:pointer;
-    background-image:url(img/checkbox.png);
-    background-position: 0 -6px;
-    margin-right: 10px;
-}
-input[type=checkbox]:checked + label {
-    background-position: 0 -31px;
 }
 
 /*end checkout*/

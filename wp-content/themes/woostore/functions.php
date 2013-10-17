@@ -105,9 +105,8 @@ if (!function_exists('woocommerce_content')) {
                 <?php
                 if (is_singular('product')) {
                     remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 10);
+                    add_action('woocommerce_after_single_product_summary', 'woocommerce_output_product_data_tabs', 30);
                     remove_action('woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15);
-                    remove_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 20);
-                    add_action('woocommerce_after_single_product_summary', 'woocommerce_output_related_products', 2);
                     do_action('woocommerce_before_shop_loop');
                     while (have_posts()) : the_post();
 
@@ -156,5 +155,152 @@ if (!function_exists('woocommerce_content')) {
         <?php
     }
 
+}
+
+
+add_filter('woocommerce_billing_fields', 'custom_woocommerce_billing_fields');
+
+function custom_woocommerce_billing_fields($fields) {
+
+// Over-ride a single label
+    $fields['billing_first_name'] = array(
+        'label' => __('First Name', 'woothemes'),
+        'placeholder' => __('First Name*', 'woothemes'),
+        'required' => true,
+        'class' => array('small fll')
+    );
+    $fields['billing_last_name'] = array(
+        'label' => __('Last Name', 'woothemes'),
+        'placeholder' => __('Last Name*', 'woothemes'),
+        'required' => true,
+        'class' => array('small flr')
+    );
+    $fields['billing_company'] = array(
+        'label' => __('Company Name', 'woothemes'),
+        'placeholder' => __('Company Name', 'woothemes'),
+        'required' => FALSE,
+        'class' => array('large')
+    );
+    $fields['billing_address_1'] = array(
+        'label' => __('Street Address', 'woothemes'),
+        'placeholder' => __('Street Address', 'woothemes'),
+        'required' => FALSE,
+        'class' => array('large')
+    );
+    $fields['billing_address_2'] = array(
+        'label' => __('Apartment, Suite, Unit', 'woothemes'),
+        'placeholder' => __('Apartment, Suite, Unit', 'woothemes'),
+        'required' => FALSE,
+        'class' => array('large')
+    );
+    $fields['billing_state'] = array(
+        'label' => __('State/County', 'woothemes'),
+        'placeholder' => __('State/County', 'woothemes'),
+        'required' => FALSE,
+        'class' => array('small fll')
+    );
+    $fields['billing_postcode'] = array(
+        'label' => __('Postal Code/Zip', 'woothemes'),
+        'placeholder' => __('Postal Code/Zip', 'woothemes'),
+        'required' => FALSE,
+        'class' => array('small flr')
+    );
+    $fields['billing_email'] = array(
+        'label' => __('Email', 'woothemes'),
+        'placeholder' => __('Email*', 'woothemes'),
+        'required' => true,
+        'class' => array('small fll')
+    );
+    $fields['billing_phone'] = array(
+        'label' => __('Phone', 'woothemes'),
+        'placeholder' => __('Phone*', 'woothemes'),
+        'required' => true,
+        'class' => array('small flr')
+    );
+    $fields['billing_city'] = array(
+        'label' => __('Town / City', 'woothemes'),
+        'placeholder' => __('Town / City *', 'woothemes'),
+        'required' => true,
+        'class' => array('large')
+    );
+    $fields['billing_country']['label'] = __('', 'woothemes');
+    $fields['billing_country']['required'] = FALSE;
+
+
+    /**
+     * You can over-ride - billing_first_name, billing_last_name, billing_company, billing_address_1, billing_address_2, billing_city, billing_postcode, billing_country, billing_state, billing_email, billing_phone
+     */
+    return $fields;
+}
+
+add_filter('woocommerce_checkout_fields', 'custom_woocommerce_checkout_fields');
+
+function custom_woocommerce_checkout_fields($fields) {
+    $fields['account']['account_username'] = array(
+        'label' => __('', 'woothemes'),
+        'placeholder' => __('Account username', 'woothemes'),
+        'class' => array('small')
+    );
+    $fields['account']['account_password'] = array(
+        'label' => __('', 'woothemes'),
+        'placeholder' => __('Account password', 'woothemes'),
+        'class' => array('small')
+    );
+    $fields['account']['account_password-2'] = array(
+        'label' => __('', 'woothemes'),
+        'placeholder' => __('Confirm password', 'woothemes'),
+        'class' => array('small fll')
+    );
+    
+    $fields['shipping']['shipping_first_name'] = array(
+        'label' => __('', 'woothemes'),
+        'placeholder' => __('First Name *', 'woothemes'),
+        'required' => true,
+        'class' => array('small fll')
+    );
+    $fields['shipping']['shipping_last_name'] = array(
+        'label' => __('', 'woothemes'),
+        'placeholder' => __('Last Name *', 'woothemes'),
+        'required' => true,
+        'class' => array('small flr')
+    );
+    $fields['shipping']['shipping_company'] = array(
+        'label' => __('', 'woothemes'),
+        'placeholder' => __('Company Name', 'woothemes'),
+        'required' => FALSE,
+        'class' => array('large')
+    );
+    $fields['shipping']['shipping_address_1'] = array(
+        'label' => __('', 'woothemes'),
+        'placeholder' => __('Street address', 'woothemes'),
+        'required' => FALSE,
+        'class' => array('large')
+    );
+    $fields['shipping']['shipping_address_2'] = array(
+        'label' => __('', 'woothemes'),
+        'placeholder' => __('Apartment, suite, unit etc. (optional)', 'woothemes'),
+        'required' => FALSE,
+        'class' => array('large')
+    );
+    $fields['shipping']['shipping_city'] = array(
+        'label' => __('', 'woothemes'),
+        'placeholder' => __('Town / City', 'woothemes'),
+        'required' => FALSE,
+        'class' => array('large')
+    );
+    $fields['shipping']['shipping_state'] = array(
+        'label' => __('', 'woothemes'),
+        'placeholder' => __('State / County', 'woothemes'),
+        'required' => FALSE,
+        'class' => array('small fll')
+    );
+    $fields['shipping']['shipping_postcode'] = array(
+        'label' => __('', 'woothemes'),
+        'placeholder' => __('Postcode / Zip', 'woothemes'),
+        'required' => FALSE,
+        'class' => array('small flr')
+    );
+
+    return $fields;
 }
 ?>
