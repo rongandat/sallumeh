@@ -489,7 +489,7 @@ div.body-content {
 }
 
 
-h1.detal, h1.page-title {
+h1.detal, h1.page-title, h1.page-title span {
     color: #F3219E;
     font-family: Zapfino;
     font-size: 68px;
@@ -498,6 +498,7 @@ h1.detal, h1.page-title {
     position: absolute;
     text-shadow: -2px 3px 0 #000000;
     top: -10px;
+    width: 100%
 }
 .woocommerce-breadcrumb, .breadcrumb{
     clear: both;

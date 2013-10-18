@@ -9,7 +9,7 @@
 		<?php } ?>  
 
 		<?php if (have_posts()) : $count = 0; ?>
-        
+             <h1 class="page-title">
             <?php if (is_category()) { ?>
         	<span class="archive_header">
         		<span class="fl cat"><?php _e( 'Archive', 'woothemes' ); ?> | <?php echo single_cat_title(); ?></span> 
@@ -32,30 +32,37 @@
             <span class="archive_header"><?php _e( 'Tag Archives:', 'woothemes' ); ?> <?php echo single_tag_title( '', true); ?></span>
             
             <?php } ?>
+            </h1>       
             <div class="fix"></div>
         
         <?php while (have_posts()) : the_post(); $count++; ?>
                                                                     
             <!-- Post Starts -->
-            <div <?php post_class(); ?>>
-
-                <?php if ( $woo_options[ 'woo_post_content' ] != "content" ) woo_image( 'width='.$woo_options[ 'woo_thumb_w' ].'&height='.$woo_options[ 'woo_thumb_h' ].'&class=thumbnail '.$woo_options[ 'woo_thumb_align' ]); ?> 
-
-                <h2 class="title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a></h2>
+            <div <?php post_class('post-info'); ?>>
+                <div class="left-content">
+                        <?php woo_post_meta(); ?>
+                </div>
                 
-                <?php woo_post_meta(); ?>
-                
-                <div class="entry">
-                    <?php if ( $woo_options[ 'woo_post_content' ] == "content" ) the_content(__( 'Read More...', 'woothemes' )); else the_excerpt(); ?>
-                </div><!-- /.entry -->
+                <div class="right-content">
+                    <h1 class="title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
 
-                <div class="post-more">      
-                	<?php if ( $woo_options[ 'woo_post_content' ] == "excerpt" ) { ?>
-					<span class="comments"><?php comments_popup_link(__( 'Leave a comment', 'woothemes' ), __( '1 Comment', 'woothemes' ), __( '% Comments', 'woothemes' )); ?></span>
-					<span class="post-more-sep">&bull;</span>
-                    <span class="read-more"><a href="<?php the_permalink() ?>" title="<?php esc_attr_e( 'Continue Reading &rarr;', 'woothemes' ); ?>"><?php _e( 'Continue Reading &rarr;', 'woothemes' ); ?></a></span>
-                    <?php } ?>
-                </div>   
+                    <?php if ( $woo_options['woo_post_content'] != 'content' ) woo_image( 'width=' . $woo_options['woo_thumb_w'] . '&height='.$woo_options['woo_thumb_h'] . '&class=thumbnail ' . $woo_options['woo_thumb_align'] ); ?> 
+
+                    <div class="entry">
+                                            <?php global $more; $more = 0; ?>	                                        
+                        <?php if ( $woo_options['woo_post_content'] == 'content' ) { the_content(__( 'Read More...', 'woothemes' ) ); } else { the_excerpt(); } ?>
+                    </div>
+                            <div class="fix"></div>
+
+                    <div class="content">    
+                                            <span class="comments"><?php comments_popup_link( __( 'Leave a comment', 'woothemes' ), __( '1 Comment', 'woothemes' ), __( '% Comments', 'woothemes' ) ); ?></span>
+                            <?php if ( $woo_options[ 'woo_post_content' ] == "excerpt" ) { ?>
+                                            <span class="post-more-sep">&bull;</span>
+                        <span class="read-more"><a href="<?php the_permalink(); ?>" title="<?php esc_attr_e( 'Continue Reading &rarr;', 'woothemes' ); ?>"><?php _e( 'Continue Reading &rarr;', 'woothemes' ); ?></a></span>
+                        <?php } ?>
+                    </div>
+                           
+                </div>
 
             </div><!-- /.post -->
             
