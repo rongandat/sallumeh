@@ -1,5 +1,6 @@
 <?php get_header(); ?>
-    
+    <div class="body-content-top">
+    <div class="body-content blogpage">
     <div id="content" class="col-full">
 		<div id="main" class="col-left">
             
@@ -71,7 +72,8 @@
 		</div><!-- /#main -->
 
         <?php get_sidebar(); ?>
-
+                <div class="clb"></div>
     </div><!-- /#content -->
-		
+	</div>
+    </div>	
 <?php get_footer(); ?>

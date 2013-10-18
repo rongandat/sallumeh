@@ -10,7 +10,9 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 global $woocommerce;
-
+?>
+<div class="billing">
+<?php
 if ( $order ) : ?>
 
 	<?php if ( in_array( $order->status, array( 'failed' ) ) ) : ?>
@@ -67,3 +69,4 @@ if ( $order ) : ?>
 	<p><?php _e( 'Thank you. Your order has been received.', 'woocommerce' ); ?></p>
 
 <?php endif; ?>
+</div>

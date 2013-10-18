@@ -182,7 +182,7 @@ div#navigation{
 div.head-menu{
     float: right;
     display: block;
-    padding: 63px 0 15px;
+    padding: 45px 0 15px;
     clear: both;
 }
 
@@ -1186,7 +1186,7 @@ div.coupon-form input[type=submit] {
 }
 
 div.create-account{
-     padding-top: 5px;
+    padding-top: 5px;
 }
 
 div.billing label{
@@ -1197,7 +1197,181 @@ div.billing input[type=checkbox]  + label{
     display: block;
 }
 
+div.checkout table a{
+    color: #000;
+}
 
+div.coupon input[type=submit]{
+    display: block;
+    padding: 5px 60px;
+    float: none;
+    clear: both;
+}
 /*end checkout*/
 
 
+/*blog page*/
+div.blogpage, div.blogpage a{
+    color: #000;
+}
+div.blogpage .left-content{
+    display: block;
+    float: left;
+    padding: 50px 25px 0 20px;
+}
+
+div.blogpage .left-content .date{
+
+    font-size: 14px;
+}
+div.blogpage .left-content span{
+    color: #f3219e;
+    display: block;
+    text-align: center;
+}
+div.blogpage .left-content span.day{
+    font-size: 19px;
+}
+div.blogpage .left-content .tags{
+    padding-top: 30px;
+}
+div.blogpage .left-content .tags span{
+    text-align: right;
+}
+
+div.blogpage .left-content a{
+    display: block;
+    color: #00aeef;
+    text-align: right;
+    font-size: 12px;
+}
+
+div.blogpage .right-content{
+    display: block;
+    float: left;
+    width: 380px;
+    padding: 45px 25px 0 0;
+    text-align: left;
+}
+
+div.blogpage .right-content h1, div.blogpage .right-content h1 a{
+    font-family: Zapfino;
+    font-size: 30px;
+    color: #ec008c;
+    padding-bottom: 5px;
+    text-transform: capitalize;
+    font-weight: normal;
+}
+
+div.blogpage .right-content .content{
+    color: #000;
+    font-size: 12px;
+    line-height: 1.5;
+    padding-bottom: 20px;
+}
+
+div.blogpage .tabs{
+    float: left;
+    margin: 30px 0 0 0;
+    border-left: 1px solid #bcbdc0;
+    width: 190px;
+    padding: 0 15px;
+    min-height: 340px;
+    color: #000;
+}
+
+div.blogpage .tabs h3{
+    font-weight: bold;
+    font-size: 15px;
+    padding-bottom: 10px;
+}
+div.blogpage .tabs a{
+    color: #000;
+    font-size: 13px;
+    display: block;
+}
+div.blogpage .tabs a.active{
+    color: #ff00ff
+}
+
+div.blogpage .tabs .content p{
+    font-size: 12px;
+    color: #ff00ff;
+
+}
+
+div.blogpage .tabs .tags{
+    padding-top: 40px;
+    height: 135px;
+}
+
+div.post-info{
+    display: block;
+}
+
+div.blogpage #main{
+    float: left;
+    width: 565px;
+}
+div.widget{
+    padding-top: 40px;
+    min-height: 90px;
+}
+div.widget h3{
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+div.widget a{
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+div.profile-image{
+    display: block;
+    float: left;
+    padding-right: 15px; 
+}
+div.profile-content{
+    display: block;
+    float: left;
+}
+
+#commentform input[type=submit]{
+   margin-top: 5px;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: medium none;
+    margin-bottom: 10px;
+    padding: 3px 45px;
+    -moz-box-shadow: -1px 3px 11px #000000;
+    -webkit-box-shadow: -1px 3px 11px #000000;
+    box-shadow: -1px 3px 11px #000000;
+    color: #ec008c;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+ol.commentlist li{
+    display: block;
+    clear: both;
+    padding: 10px 0;
+}
+
+ol.commentlist li .avatar{
+    display: block;
+    float: left;
+    padding-right: 5px;
+}
+
+div#post-author{
+    padding-bottom: 10px;
+}
+div#post-entries{
+    padding-bottom: 10px;
+}
+div#comments{
+    padding-bottom: 10px;
+}
+/*end blog page*/
