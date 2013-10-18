@@ -1,21 +1,17 @@
 <?php get_header(); ?>
 <?php global $woo_options; ?>
-       
+       <div class="body-content-top">
+    <div class="body-content blogpage">
     <div id="content" class="page col-full">
 		<div id="main" class="col-left">
-		           
-		<?php if ( $woo_options[ 'woo_breadcrumbs_show' ] == 'true' ) { ?>
-			<?php woo_breadcrumbs(); ?>  
-		<?php } ?>  			
-
+	
         <?php if (have_posts()) : $count = 0; ?>
         <?php while (have_posts()) : the_post(); $count++; ?>
-                                                                    
+            <h1 class="page-title"><?php the_title(); ?></h1>       
+            <?php woocommerce_breadcrumb(); ?>  
             <div <?php post_class(); ?>>
 
-			    <h1 class="title"><?php the_title(); ?></h1>
-
-                <div class="entry">
+                <div class="entry page-info">
                 	<?php the_content(); ?>
 
 					<?php wp_link_pages( array( 'before' => '<div class="page-link">' . __( 'Pages:', 'woothemes' ), 'after' => '</div>' ) ); ?>
@@ -38,7 +34,8 @@
 		</div><!-- /#main -->
 
         <?php get_sidebar(); ?>
-
+                <div class="clb"></div>
     </div><!-- /#content -->
-		
+	</div>
+           </div>
 <?php get_footer(); ?>

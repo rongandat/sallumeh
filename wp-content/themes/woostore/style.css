@@ -486,6 +486,7 @@ div.body-content {
     position: relative;
     width: 100%;
     padding-bottom: 30px;
+    min-height: 360px
 }
 
 
@@ -500,7 +501,7 @@ h1.detal, h1.page-title, h1.page-title span {
     top: -10px;
     width: 100%
 }
-.woocommerce-breadcrumb, .breadcrumb{
+.woocommerce-breadcrumb, .breadcrumb, .breadcrumb-trail{
     clear: both;
     display: block;
     padding: 22px 0 0 18px;
@@ -508,12 +509,14 @@ h1.detal, h1.page-title, h1.page-title span {
     z-index: 15;
     text-transform: uppercase;
     font-size: 11px;
+    color: #fff;
 }
 
-.woocommerce-breadcrumb a, .breadcrumb a{
+.woocommerce-breadcrumb a, .breadcrumb a, .breadcrumb-trail a , div.blogpage .woocommerce-breadcrumb a{
     font-size: 11px;
     padding: 5px 2px;
     text-transform: uppercase;
+    color: #fff;
 }
 
 ul.products{
@@ -1374,5 +1377,12 @@ div#post-entries{
 }
 div#comments{
     padding-bottom: 10px;
+}
+
+div.page-info{
+    padding: 10px 30px;
+    text-align: justify;
+    line-height: 1.4;
+    font-size: 12px;
 }
 /*end blog page*/
