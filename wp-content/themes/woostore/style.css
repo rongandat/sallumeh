@@ -298,10 +298,14 @@ ul,ol{
 
 a{
 
-    color: #fff;
+    color: #00AEEF;
 
     text-decoration: none;
 
+}
+
+a:hover{
+    color: #F3219E
 }
 
 .clb,.clear{
@@ -598,7 +602,7 @@ div.blog .image{
 
     float: left;
 
-
+padding-left: 30px;
 
 }
 
@@ -1105,7 +1109,9 @@ ul.products li{
     text-align: center;
 
     line-height: 1.1;
-
+    height: 150px;
+    overflow: hidden;
+    width: 105px;
 }
 
 
@@ -1210,7 +1216,7 @@ a.added_to_cart{
 
 div.images{
 
-    padding: 20px 30px 0 35px;
+    padding: 20px 30px 15px 35px;
 
     display: block;
 
@@ -1272,7 +1278,7 @@ div.product-content{
 
     color: #000;
 
-    padding: 57px 20px 0 0;
+    padding: 57px 20px 15px 0;
 
 }
 
@@ -1669,6 +1675,8 @@ div.shopping_more_description .coupon input[type=submit]{
     font-size: 12px;
 
     padding: 5px 0 0 63px;
+    
+    cursor: pointer
 
 }
 
@@ -1721,6 +1729,8 @@ div.shopping_more_description .total input[type=submit]{
     border: 0 none;
 
     color: #ec008c;
+    
+    cursor: pointer;
 
     font-size: 12px;
 
@@ -1832,7 +1842,8 @@ div.shopping_more_description .total table tr td:first-child{
 
     width: 515px;
 
-
+    width: 490px;
+    padding: 32px;
 
 }
 
@@ -1851,6 +1862,8 @@ div.shopping_more_description .total table tr td:first-child{
     display: block;
 
     clear: both;
+    
+    margin-top: 20px;
 
 }
 
@@ -1996,7 +2009,7 @@ input[type=text],input[type=password]{
 
     border: none;
 
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 
 }
 
@@ -2072,19 +2085,18 @@ input[type=checkbox] {
 
 input[type=checkbox] + label {
 
-    padding-left:23px;
+    padding-left:33px;
 
-    height:20px; 
+    height:31px; 
 
     display:inline-block;
 
-    line-height:16px;
+    line-height:31px;
 
     background-repeat:no-repeat;
 
     background-position: 0 0;
 
-    background-position: 0 -6px;
 
     font-size:12px;
 
@@ -2093,8 +2105,6 @@ input[type=checkbox] + label {
     cursor:pointer;
 
     background-image:url(img/checkbox.png);
-
-    background-position: 0 -6px;
 
     margin-right: 10px;
 
@@ -2244,16 +2254,22 @@ div.checkout table tr td:first-child,div.checkout table tr th:first-child{
 
 }
 
-div.checkout table tr:last-child td,div.checkout table tr:last-child th{
+div.checkout table tr:last-child td{
 
     border-bottom: none;
 
 }
 
+.total .amount{
+    color: #ec008c;
+}
 
 
 
-
+::-webkit-input-placeholder { color:#000; }
+::-moz-placeholder { color:#000; } /* firefox 19+ */
+:-ms-input-placeholder { color:#000; } /* ie */
+input:-moz-placeholder { color:#000; }
 
 
 .checkout input[type=submit] {
@@ -2482,10 +2498,14 @@ div.coupon input[type=submit]{
 
 /*blog page*/
 
-div.blogpage, div.blogpage a{
+div.blogpage {
 
     color: #000;
 
+}
+
+div.blogpage a{
+    color: #00AEEF
 }
 
 div.blogpage .left-content{
@@ -2854,35 +2874,35 @@ h3#pings  { margin: 25px 0 10px 0; }
 
 
 p.stars {
-	overflow: hidden;
-	zoom: 1;
+    overflow: hidden;
+    zoom: 1;
 }
 
 p.stars span {
-	width: 80px;
-	height: 16px;
-	position: relative;
-	float: left;
-	background: url(images/star.png) repeat-x left 0;
+    width: 80px;
+    height: 16px;
+    position: relative;
+    float: left;
+    background: url(images/star.png) repeat-x left 0;
 }
 
 p.stars span a {
-	float: left;
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 16px;
-	height: 0;
-	padding-top: 16px;
-	overflow: hidden;
+    float: left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 16px;
+    height: 0;
+    padding-top: 16px;
+    overflow: hidden;
 }
 
 p.stars span a:hover, p.stars span a:focus {
-	background: url(images/star.png) repeat-x left -16px;
+    background: url(images/star.png) repeat-x left -16px;
 }
 
 p.stars a.active {
-	background: url(images/star.png) repeat-x left -32px;
+    background: url(images/star.png) repeat-x left -32px;
 }
 
 p.stars span a.star-1 { width: 16px; z-index: 10; }
@@ -2894,24 +2914,43 @@ p.stars span a.star-5 { width: 80px; z-index: 6; }
 /* Sidebar / footer stars */
 
 #sidebar .star-rating, #footer-widgets .star-rating {
-	width: 60px;
-	height: 12px;
-	background: url(images/star-small.png) repeat-x left 0;
-	margin-top:2px;
+    width: 60px;
+    height: 12px;
+    background: url(images/star-small.png) repeat-x left 0;
+    margin-top:2px;
 }
 
 #sidebar .star-rating span, #footer-widgets .star-rating span {
-	background: url(images/star-small.png) repeat-x left -24px;
-	padding-top: 12px;
+    background: url(images/star-small.png) repeat-x left -24px;
+    padding-top: 12px;
 }
 
 #sidebar p.stars span, #footer-widgets p.stars span {
-	width: 60px;
-	height: 12px;
-	background: url(images/star-small.png) repeat-x left 0;
+    width: 60px;
+    height: 12px;
+    background: url(images/star-small.png) repeat-x left 0;
 }
 
 #sidebar p.stars span a, #footer-widgets p.stars span a {
-	width: 12px;
-	padding-top: 12px;
+    width: 12px;
+    padding-top: 12px;
+}
+
+
+.woocommerce-checkout .form-row .chzn-container{
+    padding-bottom: 15px;
+}
+
+.shipping_address label{
+    display: none;
+}
+
+
+.single_add_to_cart_button {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 0 none;
+    color: #EC008C;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
 }
