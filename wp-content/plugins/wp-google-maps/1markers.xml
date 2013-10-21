@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<markers>
+  <marker>
+    <marker_id>1</marker_id>
+    <map_id>1</map_id>
+    <title></title>
+    <address>San Francisco CA 94111</address>
+    <desc></desc>
+    <pic></pic>
+    <icon></icon>
+    <linkd></linkd>
+    <lat>37.795936</lat>
+    <lng>-122.400003</lng>
+    <anim></anim>
+    <category>0</category>
+    <infoopen></infoopen>
+  </marker>
+</markers>

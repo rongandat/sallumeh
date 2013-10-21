@@ -1,126 +1,126 @@
-*** WooStore Changelog ***
-
-2012.07.19 - version 1.4
- * template-sale.php - now uses content-product instead of loop-shop. Requires WooCommerce 1.6.0+
-
-2012.04.17 - version 1.3.32
- * template-sale.php preparation for WooCommerce 1.5.4
-
-2012.04.16 - version 1.3.31
- * /includes/slider.php - slide images now use slide title for alt attribute
-
-2012.03.29 - version 1.3.3
- * /includes/widgets/widget-woo-adspace.php - Fix "image not displaying" issue in the Woo - Adspace widget.
-
-2012.02.20 - version 1.3.2
- * /includes/theme-options.php - Add sub-headings to various sections of the Theme Options.
- * /includes/theme-woocommerce.php - Update search fragment to use & instead of ?, in accordance with WooFramework update (requires WooFramework V5.1.3 or higher).
-
-2012.02.03 - version 1.3.1
- * style.css improved message styles when containing a ul
- 			 better checkbox styling at checkout
- * /styles/black-white.css
-           blue-orange.css
-           green-brown.css
-           pink-blue.css style fix to cart button in nav
-
-2012.02.01 - version 1.3
- * index.php WooCommerce 1.4 preparation; replaced depreciated classes and updated custom field IDs
- * header.php
-   search.php
-   includes/theme-options.php added option to make header search products or posts
-
-2012.01.20 - version 1.2.5
- * includes/theme-woocommerce.php search pagination fix
-
-2012.01.18 - version 1.2.4
- * style.css fixed ie9 rounded corner issue
-
-2012.01.12 - version 1.2.3
- * slider next/prev fixed
-
-2011.12.09 - version 1.2.2
- * template-sale.php query fix
-
-2011.12.07 - version 1.2.1
- * index.php modified featured products loop to include sale makers
-
-2011.11.23 - version 1.2
- * includes/theme-options.php,
-   index.php - added options to select how many entries to show on homepage.
-
-2011.11.24 - version 1.1.2
- * header.php - changed home icon to use get_template_directory_uri for better child theming
-
-2011.11.22 - version 1.1.1
- * style.css - improved add-ons styling
- * includes/theme-woocommerce.php - made all relevant functions pluggable
-
-2011.11.19 - version 1.1
- * includes/theme-options.php,
-   includes/slider.php - added custom field option to slides to disable overlay
-
-2011.11.09 - version 1.0.12
- * /includes/widgets/widget-woo-flickr.php - Fixed bug with Flickr images not displaying in the widget.
- * /includes/theme-woocommerce.php - Add better support for when the ?post_type=product fragment is added to woo_pagination().
-
-2011.10.29 - version 1.0.11
- * includes/theme-actions.php - fixed styling options background color with image again, fixed link color, hover color, button color
-
-2011.10.27 - version 1.0.10
- * includes/theme-actions.php - fixed styling options background color with image
- * /includes/js/general.js - Added .stop() before calling .animate().
-
-2011.10.24 - version 1.0.9
- * includes/theme-options.php - refined homepage options and added latest blog post to homepage content option.
- * index.php - tweaked homepage content option to show latest blog post
- * includes/theme-woocomerce.php added search fragment for search pagination
- * style.css - Hide slides and slide navigation until the slider has loaded.
- * /includes/js/general.js - Add support for displaying a single slide. Fade slide navigation in once loaded.
- * /includes/slider.php - Hide slider navigation if there is only a single slide.
-
-2011.10.19 - version 1.0.8
- * includes/theme-woocommerce.php hooked WC sidebar differently for easier removal
- * template-sale.php added sale template
- * /lang replaced en_US with en_GB
- * includes/theme-woocomerce.php added search fragment for search pagination
-
-2011.10.19 - version 1.0.7
- * front-page.php - DELETED (remove from your theme folder)
- * index.php - added proper classes to home-content 
- * includes/theme-options.php - fixed homepage content to pull a page
- * style.css - added CSS for .home-content. Tweaked styling for slider navigation
- * includes/slider.php - fixed prev/next buttons to not slide
- * images/btn-slider-left.png, images/btn-slider-right.png - tweaked images
-
-2011.10.17 - version 1.0.6
- * includes/theme-options.php improved 'Homepage Content' label to avoid confusion
-
-2011.10.16 - version 1.0.5
- * style.css improved sub category styling
- * includes/widgets/widget-woo-twitter.php secure http request
- * includes/theme-woocommerce.php unhooked wc sidebar
-
-2011.10.11 - version 1.0.4
- * includes/featured-products-slider.php php class fix
- * css/effects.css, css/reset.css - merged into style.css
- * header.php - removed effects.css
-
-2011.10.06 - version 1.0.3
- * includes/theme-options.php adding product post type to Woo SEO panel
- * style.css added form-row-wide class
-
-2011.10.05 - version 1.0.2
- * style.css fixed a bug with the footer widget alignment in FF7.
- * style.css made sure blog posts don't wrap around breadcrumbs
- * includes/theme-actions.php line 95 made sure user specified bg colour persists when using alternate colour scheme.
- * includes/js/general.js slider persistent randomize bug
-
-2011.10.03 - version 1.0.1
- * style.css fixed selects within tables displaying strangely in IE8.
- * style.css made h1.title & h1.page-title clear the breadcrumb.
- * includes/js/general.js removed uniform from checkboxes to fix contact form bug
- * added includes/theme-install.php for defining options on theme activation and moved image option updates here
-
-2011.09.27 - version 1.0
+*** WooStore Changelog ***
+
+2012.07.19 - version 1.4
+ * template-sale.php - now uses content-product instead of loop-shop. Requires WooCommerce 1.6.0+
+
+2012.04.17 - version 1.3.32
+ * template-sale.php preparation for WooCommerce 1.5.4
+
+2012.04.16 - version 1.3.31
+ * /includes/slider.php - slide images now use slide title for alt attribute
+
+2012.03.29 - version 1.3.3
+ * /includes/widgets/widget-woo-adspace.php - Fix "image not displaying" issue in the Woo - Adspace widget.
+
+2012.02.20 - version 1.3.2
+ * /includes/theme-options.php - Add sub-headings to various sections of the Theme Options.
+ * /includes/theme-woocommerce.php - Update search fragment to use & instead of ?, in accordance with WooFramework update (requires WooFramework V5.1.3 or higher).
+
+2012.02.03 - version 1.3.1
+ * style.css improved message styles when containing a ul
+ 			 better checkbox styling at checkout
+ * /styles/black-white.css
+           blue-orange.css
+           green-brown.css
+           pink-blue.css style fix to cart button in nav
+
+2012.02.01 - version 1.3
+ * index.php WooCommerce 1.4 preparation; replaced depreciated classes and updated custom field IDs
+ * header.php
+   search.php
+   includes/theme-options.php added option to make header search products or posts
+
+2012.01.20 - version 1.2.5
+ * includes/theme-woocommerce.php search pagination fix
+
+2012.01.18 - version 1.2.4
+ * style.css fixed ie9 rounded corner issue
+
+2012.01.12 - version 1.2.3
+ * slider next/prev fixed
+
+2011.12.09 - version 1.2.2
+ * template-sale.php query fix
+
+2011.12.07 - version 1.2.1
+ * index.php modified featured products loop to include sale makers
+
+2011.11.23 - version 1.2
+ * includes/theme-options.php,
+   index.php - added options to select how many entries to show on homepage.
+
+2011.11.24 - version 1.1.2
+ * header.php - changed home icon to use get_template_directory_uri for better child theming
+
+2011.11.22 - version 1.1.1
+ * style.css - improved add-ons styling
+ * includes/theme-woocommerce.php - made all relevant functions pluggable
+
+2011.11.19 - version 1.1
+ * includes/theme-options.php,
+   includes/slider.php - added custom field option to slides to disable overlay
+
+2011.11.09 - version 1.0.12
+ * /includes/widgets/widget-woo-flickr.php - Fixed bug with Flickr images not displaying in the widget.
+ * /includes/theme-woocommerce.php - Add better support for when the ?post_type=product fragment is added to woo_pagination().
+
+2011.10.29 - version 1.0.11
+ * includes/theme-actions.php - fixed styling options background color with image again, fixed link color, hover color, button color
+
+2011.10.27 - version 1.0.10
+ * includes/theme-actions.php - fixed styling options background color with image
+ * /includes/js/general.js - Added .stop() before calling .animate().
+
+2011.10.24 - version 1.0.9
+ * includes/theme-options.php - refined homepage options and added latest blog post to homepage content option.
+ * index.php - tweaked homepage content option to show latest blog post
+ * includes/theme-woocomerce.php added search fragment for search pagination
+ * style.css - Hide slides and slide navigation until the slider has loaded.
+ * /includes/js/general.js - Add support for displaying a single slide. Fade slide navigation in once loaded.
+ * /includes/slider.php - Hide slider navigation if there is only a single slide.
+
+2011.10.19 - version 1.0.8
+ * includes/theme-woocommerce.php hooked WC sidebar differently for easier removal
+ * template-sale.php added sale template
+ * /lang replaced en_US with en_GB
+ * includes/theme-woocomerce.php added search fragment for search pagination
+
+2011.10.19 - version 1.0.7
+ * front-page.php - DELETED (remove from your theme folder)
+ * index.php - added proper classes to home-content 
+ * includes/theme-options.php - fixed homepage content to pull a page
+ * style.css - added CSS for .home-content. Tweaked styling for slider navigation
+ * includes/slider.php - fixed prev/next buttons to not slide
+ * images/btn-slider-left.png, images/btn-slider-right.png - tweaked images
+
+2011.10.17 - version 1.0.6
+ * includes/theme-options.php improved 'Homepage Content' label to avoid confusion
+
+2011.10.16 - version 1.0.5
+ * style.css improved sub category styling
+ * includes/widgets/widget-woo-twitter.php secure http request
+ * includes/theme-woocommerce.php unhooked wc sidebar
+
+2011.10.11 - version 1.0.4
+ * includes/featured-products-slider.php php class fix
+ * css/effects.css, css/reset.css - merged into style.css
+ * header.php - removed effects.css
+
+2011.10.06 - version 1.0.3
+ * includes/theme-options.php adding product post type to Woo SEO panel
+ * style.css added form-row-wide class
+
+2011.10.05 - version 1.0.2
+ * style.css fixed a bug with the footer widget alignment in FF7.
+ * style.css made sure blog posts don't wrap around breadcrumbs
+ * includes/theme-actions.php line 95 made sure user specified bg colour persists when using alternate colour scheme.
+ * includes/js/general.js slider persistent randomize bug
+
+2011.10.03 - version 1.0.1
+ * style.css fixed selects within tables displaying strangely in IE8.
+ * style.css made h1.title & h1.page-title clear the breadcrumb.
+ * includes/js/general.js removed uniform from checkboxes to fix contact form bug
+ * added includes/theme-install.php for defining options on theme activation and moved image option updates here
+
+2011.09.27 - version 1.0
  * First release!

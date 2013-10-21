@@ -65,5 +65,7 @@ if (!defined('ABSPATH'))
     <?php
     
     ?>
-    <?php do_action('woocommerce_after_single_product'); ?>
 </div>
+    <?php do_action('woocommerce_after_single_product'); ?>
+
+<div class="clb"></div>

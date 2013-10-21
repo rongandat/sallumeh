@@ -16,6 +16,5 @@ if (!$post->post_excerpt)
 ?>
 <div class="description" itemprop="description">
 <?php echo apply_filters('woocommerce_short_description', $post->post_excerpt) ?>
-    <a href="#" class="more"><?php echo __('More Description', 'woocommerce') ?></a>
 
 </div>

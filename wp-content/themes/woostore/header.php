@@ -78,12 +78,13 @@
                 <div class="head-menu">
                     <ul>
                         <li>
-                            <div id="btn-cart" class="fr">
+                            <div id="" class="fr">
                                 <a href="<?php echo $woocommerce->cart->get_cart_url(); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>">
                                     <span> 
                                         <?php
-                                        echo sprintf(_n('%d item &ndash; ', '%d items &ndash; ', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);
-                                        echo $woocommerce->cart->get_cart_total();
+//                                        echo sprintf(_n('%d item &ndash; ', '%d items &ndash; ', $woocommerce->cart->cart_contents_count, 'woothemes'), $woocommerce->cart->cart_contents_count);
+//                                        echo $woocommerce->cart->get_cart_total();
+                                        echo __('SHOPPING BAG','woothemes')
                                         ?>
                                     </span>
                                 </a>
@@ -103,7 +104,7 @@
                     </ul>
 	    
 	    	<form role="search" method="get" id="searchform" class="searchform" action="<?php echo home_url(); ?>">
-				<input type="text" value="<?php the_search_query(); ?>" name="s" id="s"  class="field s" placeholder="<?php _e('Search', 'woothemes'); ?>" />
+				<input type="text" value="<?php the_search_query(); ?>" name="s" id="s"  class="field s" placeholder="" />
 				<?php if ($woo_options['woo_header_search_scope'] == 'products' ) { echo '<input type="hidden" name="post_type" value="product" />'; } else { echo '<input type="hidden" name="post_type" value="post" />'; } ?>	
 		</form>
                 </div>

@@ -56,9 +56,9 @@
 	    			<div class="image">
 						<?php if ($has_url != '') { ?><a href="<?php echo $has_url; ?>"><?php } ?>   				
 	    				<?php if ($woo_options[ 'woo_slider_autoheight' ] == "true") { ?>
-	    					<?php woo_image('key=image&width=830&class=slide-img&link=img&meta=' . get_the_title() . ''); ?>
+	    					<?php woo_image('key=image&class=slide-img&link=img&meta=' . get_the_title() . ''); ?>
 						<?php } else { ?>
-							<?php woo_image('key=image&width=830&height=' .$woo_options['woo_slider_fixed_height']. '&class=slide-img&link=img&meta=' . get_the_title() . ''); ?>
+							<?php woo_image('key=image&height=' .$woo_options['woo_slider_fixed_height']. '&class=slide-img&link=img&meta=' . get_the_title() . ''); ?>
 						<?php } ?>
 						<?php if ($has_url != '') { ?></a><?php } ?>
 	    			</div><!-- /.image -->
