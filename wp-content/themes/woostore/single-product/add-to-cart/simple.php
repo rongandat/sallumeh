@@ -39,7 +39,7 @@ if ( ! $product->is_purchasable() ) return;
 //	 			) );
 	 	?>
             <input type="hidden" name="quantity" value="1"/>
-            <a class="cart" href="javascript:void(0)" onclick="jQuery('form').submit()"><?php echo __( 'Add to cart', 'woocommerce' ) ?></a>
+            <a class="cart" href="javascript:void(0)" onclick="jQuery('form').submit()"><?php echo __( 'Add to bag', 'woocommerce' ) ?></a>
 
 	 	<?php do_action('woocommerce_after_add_to_cart_button'); ?>
 

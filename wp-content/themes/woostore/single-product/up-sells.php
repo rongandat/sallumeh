@@ -59,10 +59,11 @@ wp_reset_postdata();
 
 <script>
         jQuery(document).ready(function() {
-            
-            var htabs = (jQuery('#tab-description').height() >  jQuery('#tab-reviews').height())?jQuery('#tab-description').height():jQuery('#tab-reviews').height();
+            console.debug(jQuery('#tab-description').height());
+            console.debug(jQuery('#comments').height());
+            var htabs = (jQuery('#tab-description').height() >  jQuery('#comments').height())?jQuery('#tab-description').height():jQuery('#comments').height();
             var hdesc = (jQuery('.images').height() >  jQuery('.product-content').height())?jQuery('.images').height():jQuery('.product-content').height();
-            var lheighttabs = htabs+hdesc;
+            var lheighttabs = htabs+hdesc+60;
             var rheighttabs = jQuery('.related').height();
             if(lheighttabs > rheighttabs)
                 jQuery('.related').css('height',lheighttabs);
