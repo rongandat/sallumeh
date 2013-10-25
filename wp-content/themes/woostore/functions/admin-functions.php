@@ -3788,12 +3788,12 @@ function wooframework_add_woodojo_banner () {
 	$close_url = wp_nonce_url( admin_url( 'admin-ajax.php?action=wooframework_banner_close&banner=woodojo' ), 'wooframework_banner_close' );
 	$html = '';
 	
-	$html .= '<div id="woodojo-banner" class="wooframework-banner">' . "\n";
-	$html .= '<span class="main">' . __( 'Enhance your theme with WooDojo.', 'woothemes' ) . '</span>' . "\n";
-	$html .= '<span>' . __( 'WooDojo is powerful WooThemes features suit for enhancing your website. Learn more.', 'woothemes' ) . '</span>' . "\n";
-	$html .= '<a class="button-primary" href="' . esc_url( 'http://woothemes.com/woodojo/' ) . '" title="' . esc_attr__( 'Get WooDojo', 'woothemes' ) . '" target="_blank">' . __( 'Get WooDojo', 'woothemes' ) . '</a>' . "\n";
-	$html .= '<span class="close-banner"><a href="' . $close_url . '">' . __( 'Close', 'woothemes' ) . '</a></span>' . "\n";
-	$html .= '</div>' . "\n";
+//	$html .= '<div id="woodojo-banner" class="wooframework-banner">' . "\n";
+//	$html .= '<span class="main">' . __( 'Enhance your theme with WooDojo.', 'woothemes' ) . '</span>' . "\n";
+//	$html .= '<span>' . __( 'WooDojo is powerful WooThemes features suit for enhancing your website. Learn more.', 'woothemes' ) . '</span>' . "\n";
+//	$html .= '<a class="button-primary" href="' . esc_url( 'http://woothemes.com/woodojo/' ) . '" title="' . esc_attr__( 'Get WooDojo', 'woothemes' ) . '" target="_blank">' . __( 'Get WooDojo', 'woothemes' ) . '</a>' . "\n";
+//	$html .= '<span class="close-banner"><a href="' . $close_url . '">' . __( 'Close', 'woothemes' ) . '</a></span>' . "\n";
+//	$html .= '</div>' . "\n";
 	
 	echo $html;
 } // End wooframework_add_woodojo_banner()

@@ -239,9 +239,7 @@ function woothemes_framework_settings_page() {
             </div>
             <div id="support-links">
                 <ul>
-                    <li class="changelog"><a title="Theme Changelog" href="<?php echo $manualurl; ?>#Changelog"><?php _e( 'View Changelog', 'woothemes' ); ?></a></li>
-                    <li class="docs"><a title="Theme Documentation" href="<?php echo $manualurl; ?>"><?php _e( 'View Themedocs', 'woothemes' ); ?></a></li>
-                    <li class="forum"><a href="http://www.woothemes.com/support-forum" target="_blank"><?php _e( 'Visit Forum', 'woothemes' ); ?></a></li>
+                    
                     <li class="right"><img style="display:none" src="<?php echo get_template_directory_uri(); ?>/functions/images/loading-top.gif" class="ajax-loading-img ajax-loading-img-top" alt="<?php esc_attr_e( 'Working...', 'woothemes' ); ?>" /><a href="#" id="expand_options">[+]</a> <input type="submit" value="<?php esc_attr_e( 'Save All Changes', 'woothemes' ); ?>" class="button submit-button" /></li>
                 </ul>
             </div>

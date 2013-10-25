@@ -3,12 +3,11 @@ if (!function_exists( 'woo_options')) {
 function woo_options() {
 
 // THEME VARIABLES
-$themename = "WooStore";
-$themeslug = "woostore";
+$themename = "Sallumeh";
+$themeslug = "sallumeh";
 
 // STANDARD VARIABLES. DO NOT TOUCH!
 $shortname = "woo";
-$manualurl = 'http://www.woothemes.com/support/theme-documentation/'.$themeslug.'/';
 
 //Access the WordPress Categories via an Array
 $woo_categories = array();
