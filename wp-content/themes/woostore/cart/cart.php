@@ -134,7 +134,7 @@ $woocommerce->show_messages();
         <?php if ($woocommerce->cart->coupons_enabled()) { ?>
             <div class="coupon">
 
-                <label for="coupon_code"><?php _e('Coupon', 'woocommerce'); ?>:</label> <input name="coupon_code" class="input-text" id="coupon_code" value="" /> <input type="submit" class="button" name="apply_coupon" value="<?php _e('Apply Coupon', 'woocommerce'); ?>" />
+                <label for="coupon_code"><?php _e('Coupon', 'woocommerce'); ?>:</label> <input name="coupon_code" class="input-text" id="coupon_code" value="" /> <input type="submit" class="" name="apply_coupon" value="<?php _e('Apply Coupon', 'woocommerce'); ?>" />
 
                 <?php do_action('woocommerce_cart_coupon'); ?>
 
@@ -144,9 +144,9 @@ $woocommerce->show_messages();
 
         <div class="total">
             <div class="update">
-                <input type="submit" class="button" name="update_cart" value="<?php _e('Update Cart', 'woocommerce'); ?>" />
+                <input type="submit" class="" name="update_cart" value="<?php _e('Update Cart', 'woocommerce'); ?>" />
                 <span>|</span>
-                <input type="submit" class="checkout-button button alt" name="proceed" value="<?php _e('Proceed to Checkout', 'woocommerce'); ?>" />
+                <input type="submit" class="checkout-button alt" name="proceed" value="<?php _e('Proceed to Checkout', 'woocommerce'); ?>" />
                 
                 <?php do_action('woocommerce_proceed_to_checkout'); ?>
                 <?php $woocommerce->nonce_field('cart') ?>
