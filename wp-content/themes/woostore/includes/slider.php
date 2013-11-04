@@ -52,9 +52,18 @@
 	    				
 	    			</div><!-- /.content -->
 	    			<?php endif; ?>
-	    			
+                                <?php 
+                                $new_window = get_post_meta($post->ID, 'slide_new_window', true);
+                                ?>
 	    			<div class="image">
-						<?php if ($has_url != '') { ?><a href="<?php echo $has_url; ?>"><?php } ?>   				
+						<?php if ($has_url != '') { ?>
+                                    
+                                        <?php if ($new_window == 1) { ?>
+                                                 <a target="_blank" href="<?php echo $has_url; ?>">
+                                                <?php }else{ ?>   	
+                                                         <a href="<?php echo $has_url; ?>">
+                                                <?php } ?>   	
+                                        <?php } ?>   				
 	    				<?php if ($woo_options[ 'woo_slider_autoheight' ] == "true") { ?>
 	    					<?php woo_image('key=image&class=slide-img&link=img&meta=' . get_the_title() . ''); ?>
 						<?php } else { ?>

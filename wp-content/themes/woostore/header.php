@@ -232,7 +232,6 @@ get_currentuserinfo();
 
 				<input type="text" value="<?php the_search_query(); ?>" name="s" id="s"  class="field s" placeholder="" />
 
-				<?php if ($woo_options['woo_header_search_scope'] == 'products' ) { echo '<input type="hidden" name="post_type" value="product" />'; } else { echo '<input type="hidden" name="post_type" value="post" />'; } ?>	
 
 		</form>
 
