@@ -40,7 +40,8 @@
 
 <head profile="http://gmpg.org/xfn/11">
 
-
+<link href='http://fonts.googleapis.com/css?family=Bilbo+Swash+Caps' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Roboto:700,300italic,700italic,300' rel='stylesheet' type='text/css'>
 
 <title><?php woo_title(); ?></title>
 
