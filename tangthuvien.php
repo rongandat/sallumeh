@@ -11,9 +11,9 @@
      * To change this template, choose Tools | Templates
      * and open the template in the editor.
      */
-    $cPage = 56;
-    $ePage = 100;
-    $url = 'http://www.tangthuvien.vn/forum/showthread.php?t=94118';
+    $cPage = 1;
+    $ePage = 65;
+    $url = 'http://www.tangthuvien.vn/forum/showthread.php?t=98194';
 
     $dom = new DOMDocument('1.0', 'utf-8');
     $text = '';
@@ -23,21 +23,27 @@
         $xpath = new DOMXPath($dom);
 
         $blogs = $xpath->query(".//div[contains(concat(' ', @id, ' '), ' post_message_')]");
-        
+        $listChuong = array();
         foreach ($blogs as $block) {
-            $title = $xpath->query(".//font[@size='5']", $block)->item(0)->nodeValue;
-            $content = $xpath->query('.//div[@style="display: none;"]', $block)->item(0)->nodeValue;
-            $text .= $title;
-            $text .= PHP_EOL;
-            $text .= $content;
-            $text .= PHP_EOL;
-            $text .= $title;
-            $text .= PHP_EOL;
-            var_dump($title) .'<br/>';
+            $title = $xpath->query(".//font[@size='6']", $block)->item(0)->nodeValue;
+            $title = trim($title);
+            $titList = explode(' ',$title);
+            $chuong = (int) $titList[1];
+            if (!in_array($chuong, $listChuong) && strtolower($titList[0]) == 'chương') {
+                $content = $xpath->query('.//div[@style="display: none;"]', $block)->item(0)->nodeValue;
+                $text .= $title;
+                $text .= PHP_EOL;
+                $text .= $content;
+                $text .= PHP_EOL;
+                $text .= $title;
+                $text .= PHP_EOL;
+                echo ($title) . '<br/>';
+                $listChuong[] = $chuong;
+            }
         }
     }
 
-    $fp = fopen('Ao thuat than toa 56 - 100.txt', 'w');
+    $fp = fopen('the gioi hoan my 1 - 65.txt', 'w');
     fwrite($fp, $text);
     fclose($fp);
     ?>

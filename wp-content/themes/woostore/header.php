@@ -165,12 +165,11 @@ get_currentuserinfo();
 
                         <?php if(!empty($current_user->ID)): ?>
 
-                        <li>
+                        <li class="user_login">
 
                             <span class="wellcome"><?php echo __('WELCOME ','woothemes') ?></span> <?php echo $current_user->display_name ?>
 
-                            
-
+                          
                         </li>
 
                         <li>|</li>

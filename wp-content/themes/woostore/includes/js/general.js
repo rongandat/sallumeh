@@ -36,51 +36,30 @@ jQuery(function(){
 	jQuery("select.orderby, .variations select, input[type=radio]").uniform();
    	// Setup the slider
    jQuery(window).load(function(){
-	   if( jQuery.isFunction(jQuery.fn.slides) && woo_general_params.enabled=='true' ) {
-			if ( jQuery( '#slides .slide' ).length > 1 ) {
-			
-				jQuery('#slides').slides({
-					preload: 			true,
-					preloadImage: 		woo_general_params.loading_image,
-					autoHeight: 		parseBool(woo_general_params.autoheight),
-					effect: 			woo_general_params.effect,
-					randomize: 			parseBool(woo_general_params.randomize),					
-					hoverPause: 		parseBool(woo_general_params.hoverPause),
-					
-					container: 			'slides_container',	
-					play: 				parseInt(woo_general_params.play),		
-					slideSpeed: 		parseInt(woo_general_params.slideSpeed),
-					fadeSpeed:			parseInt(woo_general_params.slideSpeed),
-					
-					crossfade: 			true,
-					generateNextPrev: 	false,
-					generatePagination: parseBool(woo_general_params.generatePagination),
-					animationStart: function(){
-						jQuery('.slide-content').stop().animate({
-							opacity:0,
-							right:-500,
-							filter:''
-						},200);
-					},
-					animationComplete: function(current){
-						jQuery('.slide-content').stop().animate({
-							opacity:1,
-							right:0,
-							filter:''
-						},300);
-					}, 
-					slidesLoaded: function () { jQuery( '#slides .navigation' ).fadeIn( 'slow' ); }
-						
+	   if( woo_general_params.enabled=='true' ) {
+                        jQuery('#slider').nivoSlider({
+					effect: 'fold',               // Specify sets like: 'fold,fade,sliceDown'
+					slices: 15,                     // For slice animations
+					boxCols: 8,                     // For box animations
+					boxRows: 4,                     // For box animations
+					animSpeed: parseInt(woo_general_params.slideSpeed),                 // Slide transition speed
+					pauseTime: 3000,                // How long each slide will show
+					startSlide: 0,                  // Set starting Slide (0 index)
+					directionNav: false,             // Next & Prev navigation
+					controlNav: true,               // 1,2,3... navigation
+					controlNavThumbs: false,        // Use thumbnails for Control Nav
+					pauseOnHover: true,             // Stop animation while hovering
+					manualAdvance: false,           // Force manual transitions
+					prevText: 'Prev',               // Prev directionNav text
+					nextText: 'Next',               // Next directionNav text
+					randomStart: false,             // Start on a random slide
+					beforeChange: function(){},     // Triggers before a slide transition
+					afterChange: function(){},      // Triggers after a slide transition
+					slideshowEnd: function(){},     // Triggers after all slides have been shown
+					lastSlide: function(){},        // Triggers when last slide is shown
+					afterLoad: function(){}         // Triggers when slider has loaded
 				});
 			
-			} else {
-				jQuery( '#slides .slide:first' ).fadeIn( 'slow' );
-			}
-			
-			if (woo_general_params.generatePagination=='true') {
-				jQuery( '#slides .pagination' ).wrap( '<div id="slider_pag" />' );
-				jQuery( '#slides #slider_pag' ).wrap( '<div id="slider_nav" />' );
-			}
 		}
 	});
 	
